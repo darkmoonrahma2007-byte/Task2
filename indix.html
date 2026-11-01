@@ -1,0 +1,746 @@
+!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصات التعلم الإلكتروني</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f3f7fb;
+    color: #24364b;
+    line-height: 1.9;
+}
+
+header {
+    background: #071b35;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 {
+    color: #65d3ff;
+    font-size: 23px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #65d3ff;
+}
+
+.hero {
+    min-height: 480px;
+    background: linear-gradient(120deg, #071b35, #0b4770);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 9%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 39px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hero p {
+    color: #d9efff;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero a {
+    display: inline-block;
+    background: #65d3ff;
+    color: #071b35;
+    padding: 11px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-image {
+    width: 330px;
+    max-width: 100%;
+}
+
+.student {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ffffff55;
+    border-radius: 12px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 280px;
+}
+
+.student-logo {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 65px 9%;
+}
+
+.section-title {
+    text-align: center;
+    color: #0b4770;
+    font-size: 29px;
+    margin-bottom: 35px;
+}
+
+.intro {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px #0b477015;
+    font-size: 17px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px #0b477012;
+    transition: .3s;
+    border-bottom: 4px solid #1686b8;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    color: #0b4770;
+    margin-bottom: 12px;
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.illustration {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.illustration svg {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+}
+
+.benefits {
+    background: #e8f5fc;
+}
+
+.benefits ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+}
+
+.benefits li {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    border-right: 5px solid #1686b8;
+}
+
+.challenges {
+    background: white;
+}
+
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #0b477015;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 550px;
+    text-align: center;
+}
+
+th {
+    background: #0b4770;
+    color: white;
+    padding: 16px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e1eaf0;
+}
+
+tr:hover {
+    background: #edf8ff;
+}
+
+.references {
+    background: #e8f5fc;
+}
+
+.references ul {
+    background: white;
+    padding: 30px 50px;
+    border-radius: 12px;
+}
+
+.references li {
+    margin-bottom: 12px;
+}
+
+.references a {
+    color: #0879b5;
+    text-decoration: none;
+}
+
+.references a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #071b35;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width: 700px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+        justify-content: center;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero-image {
+        width: 260px;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>التعلم الإلكتروني</h2>
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#intro">المقدمة</a>
+        <a href="#platforms">المنصات</a>
+        <a href="#benefits">المميزات</a>
+        <a href="#comparison">المقارنة</a>
+        <a href="#references">المراجع</a>
+    </nav>
+</header>
+
+<!-- الصفحة الرئيسية -->
+<div class="hero" id="home">
+
+    <div class="hero-text">
+
+        <h1>
+            منصات التعلم الإلكتروني
+            ودورها في تطوير العملية التعليمية
+        </h1>
+
+        <p>
+            كيف ساعدت التكنولوجيا الحديثة في تطوير التعليم
+            وتسهيل التواصل بين الطلاب والمعلمين؟
+        </p>
+
+        <a href="#intro">اكتشف المزيد</a>
+
+        <div class="student">
+
+            <span>
+                <strong>اسم الطالبه:</strong>
+                رحمه حلمي ابراهيم ابراهيم
+            </span>
+
+            <!-- الشعار التعليمي -->
+            <svg class="student-logo"
+                 viewBox="0 0 100 100"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="50" cy="50" r="46"
+                        fill="#e8f7ff"
+                        stroke="#65d3ff"
+                        stroke-width="4"/>
+
+                <path d="M15 38 L50 20 L85 38 L50 56 Z"
+                      fill="#0b4770"/>
+
+                <path d="M27 45 V65 Q50 83 73 65 V45 L50 58 Z"
+                      fill="#1686b8"/>
+
+                <path d="M85 39 V65"
+                      stroke="#0b4770"
+                      stroke-width="4"/>
+
+                <circle cx="85" cy="69" r="4"
+                        fill="#0b4770"/>
+            </svg>
+
+            <span>
+                <strong>الرقم  الجامعي:</strong>
+              2503331
+            </span>
+
+        </div>
+    </div>
+
+    <!-- رسم توضيحي -->
+    <div class="hero-image">
+
+        <svg viewBox="0 0 400 300"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <rect x="35" y="25" width="330" height="215"
+                  rx="18" fill="#e8f7ff"/>
+
+            <rect x="55" y="45" width="290" height="175"
+                  rx="10" fill="#0b4770"/>
+
+            <rect x="75" y="65" width="250" height="18"
+                  rx="5" fill="#65d3ff"/>
+
+            <rect x="80" y="105" width="105" height="85"
+                  rx="8" fill="#1686b8"/>
+
+            <rect x="200" y="105" width="110" height="12"
+                  rx="4" fill="white"/>
+
+            <rect x="200" y="130" width="90" height="10"
+                  rx="4" fill="#bdeaff"/>
+
+            <rect x="200" y="155" width="105" height="10"
+                  rx="4" fill="#bdeaff"/>
+
+            <path d="M20 245 H380 L350 270 H50 Z"
+                  fill="#65d3ff"/>
+
+            <circle cx="132" cy="145" r="18"
+                    fill="#ffffff"/>
+
+            <path d="M100 180 Q132 145 164 180"
+                  fill="#ffffff"/>
+        </svg>
+
+    </div>
+
+</div>
+
+<!-- المقدمة -->
+<section id="intro">
+
+    <h2 class="section-title">مقدمة عن التعلم الإلكتروني</h2>
+
+    <div class="intro">
+
+        <p>
+            أصبح التعلم الإلكتروني من أهم الوسائل الحديثة
+            في مجال التعليم، حيث ساعد على توفير طرق جديدة
+            للتعلم والتواصل بين الطلاب والمعلمين.
+        </p>
+
+        <br>
+
+        <p>
+            وتعتمد هذه المنصات على استخدام الإنترنت
+            والتكنولوجيا لتقديم الدروس والمواد التعليمية
+            وإدارة الواجبات والاختبارات بطريقة سهلة ومنظمة.
+        </p>
+
+        <br>
+
+        <p>
+            ومن أشهر الأمثلة على هذه المنصات
+            Google Classroom وMoodle وMicrosoft Teams.
+        </p>
+
+    </div>
+
+    <div class="illustration">
+
+        <svg viewBox="0 0 600 300"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <rect x="100" y="30" width="400" height="220"
+                  rx="18" fill="#dff3ff"
+                  stroke="#1686b8" stroke-width="5"/>
+
+            <rect x="125" y="55" width="350" height="170"
+                  rx="10" fill="#0b4770"/>
+
+            <rect x="150" y="80" width="300" height="18"
+                  rx="5" fill="#65d3ff"/>
+
+            <rect x="150" y="120" width="130" height="75"
+                  rx="8" fill="#1686b8"/>
+
+            <rect x="300" y="120" width="150" height="12"
+                  rx="5" fill="white"/>
+
+            <rect x="300" y="145" width="120" height="12"
+                  rx="5" fill="#bdeaff"/>
+
+            <path d="M70 260 H530 L490 280 H110 Z"
+                  fill="#1686b8"/>
+
+        </svg>
+
+    </div>
+
+</section>
+
+<!-- مفهوم المنصات -->
+<section>
+
+    <h2 class="section-title">
+        مفهوم منصات التعلم الإلكتروني
+    </h2>
+
+    <div class="intro">
+
+        <p>
+            منصات التعلم الإلكتروني هي مواقع أو تطبيقات
+            رقمية تتيح للطلاب الوصول إلى المحتوى التعليمي
+            والتفاعل مع المعلمين من خلال الإنترنت.
+        </p>
+
+        <br>
+
+        <p>
+            كما تساعد المؤسسات التعليمية على تنظيم
+            المقررات الدراسية ومتابعة تقدم الطلاب
+            وتقييم مستواهم التعليمي.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- أشهر المنصات -->
+<section id="platforms">
+
+    <h2 class="section-title">
+        أشهر منصات التعلم الإلكتروني
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">📚</div>
+            <h3>Google Classroom</h3>
+            <p>
+                منصة تساعد المعلمين على تنظيم الفصول
+                وإرسال الواجبات واستقبال أعمال الطلاب.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💻</div>
+            <h3>Moodle</h3>
+            <p>
+                نظام لإدارة التعلم يتيح إنشاء المقررات
+                والاختبارات والأنشطة التعليمية.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">👨‍🏫</div>
+            <h3>Microsoft Teams</h3>
+            <p>
+                منصة تساعد على عقد الاجتماعات
+                والفصول الافتراضية والتواصل المباشر.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🎓</div>
+            <h3>Blackboard</h3>
+            <p>
+                منصة تستخدم في المؤسسات التعليمية
+                لإدارة المحتوى والمقررات الدراسية.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- المميزات -->
+<section class="benefits" id="benefits">
+
+    <h2 class="section-title">
+        أهمية ومميزات التعلم الإلكتروني
+    </h2>
+
+    <ul>
+
+        <li>سهولة الوصول إلى الدروس في أي وقت.</li>
+
+        <li>توفير الوقت والجهد على الطلاب والمعلمين.</li>
+
+        <li>سهولة إرسال واستقبال الواجبات.</li>
+
+        <li>تحسين التواصل بين الطالب والمعلم.</li>
+
+        <li>إمكانية التعلم عن بُعد.</li>
+
+        <li>تنظيم الدرجات والاختبارات والأنشطة.</li>
+
+    </ul>
+
+</section>
+
+<!-- التحديات -->
+<section class="challenges">
+
+    <h2 class="section-title">
+        التحديات التي تواجه التعلم الإلكتروني
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>ضعف الإنترنت</h3>
+            <p>
+                قد يؤثر ضعف الاتصال بالإنترنت
+                على متابعة الدروس المباشرة.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>الأجهزة الإلكترونية</h3>
+            <p>
+                يحتاج الطلاب إلى أجهزة مناسبة
+                لاستخدام المنصات التعليمية.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>التدريب</h3>
+            <p>
+                يحتاج بعض الطلاب والمعلمين
+                إلى التدريب على استخدام المنصات.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>حماية البيانات</h3>
+            <p>
+                يجب الاهتمام بحماية المعلومات
+                والبيانات الشخصية للمستخدمين.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- جدول المقارنة -->
+<section id="comparison">
+
+    <h2 class="section-title">
+        مقارنة بين أشهر المنصات
+    </h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <tr>
+                <th>المنصة</th>
+                <th>الاستخدام الأساسي</th>
+                <th>أهم ميزة</th>
+            </tr>
+
+            <tr>
+                <td>Google Classroom</td>
+                <td>إدارة الفصول والواجبات</td>
+                <td>سهولة الاستخدام</td>
+            </tr>
+
+            <tr>
+                <td>Moodle</td>
+                <td>إدارة المقررات التعليمية</td>
+                <td>مرونة التخصيص</td>
+            </tr>
+
+            <tr>
+                <td>Microsoft Teams</td>
+                <td>الفصول والاجتماعات</td>
+                <td>التواصل المباشر</td>
+            </tr>
+
+            <tr>
+                <td>Blackboard</td>
+                <td>إدارة المحتوى التعليمي</td>
+                <td>تنظيم العملية التعليمية</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- الخاتمة -->
+<section>
+
+    <h2 class="section-title">الخاتمة</h2>
+
+    <div class="intro">
+
+        <p>
+            في النهاية، أصبحت منصات التعلم الإلكتروني
+            جزءًا مهمًا من تطوير العملية التعليمية،
+            حيث ساعدت على تسهيل الوصول إلى المعلومات
+            وتحسين التواصل وتنظيم الدراسة.
+        </p>
+
+        <br>
+
+        <p>
+            ومع استمرار التطور التكنولوجي، من المتوقع
+            أن يزداد دور هذه المنصات في تحسين جودة التعليم
+            وتوفير فرص تعلم أفضل للجميع.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- المراجع -->
+<section class="references" id="references">
+
+    <h2 class="section-title">المراجع والمصادر</h2>
+
+    <ul>
+
+        <li>
+            <a href="https://edu.google.com/workspace-for-education/products/classroom/"
+               target="_blank">
+                Google for Education - Classroom
+            </a>
+        </li>
+
+        <li>
+            <a href="https://moodle.org/"
+               target="_blank">
+                الموقع الرسمي لمنصة Moodle
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.microsoft.com/microsoft-teams/education"
+               target="_blank">
+                Microsoft Teams for Education
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.blackboard.com/"
+               target="_blank">
+                الموقع الرسمي لمنصة Blackboard
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.unesco.org/en/digital-education"
+               target="_blank">
+                UNESCO - Digital Education
+            </a>
+        </li>
+
+    </ul>
+
+</section>
+
+<footer>
+
+    <p>
+        ©️ 2026 - مشروع منصات التعلم الإلكتروني
+    </p>
+
+    <p>
+        إعداد الطالبه: رحمه حلمي إبراهيم إبراهيم 
+    </p>
+
+</footer>
+
+</body>
+</html>
